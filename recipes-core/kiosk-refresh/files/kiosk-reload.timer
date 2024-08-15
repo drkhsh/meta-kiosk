@@ -1,0 +1,12 @@
+[Unit]
+Description=Run reload every 24 hours
+
+[Timer]
+OnBoot=1m
+OnUnitActiveSec=24h
+Unit=kiosk-reload.service
+Persistent=false
+
+[Install]
+WantedBy=default.target
+

@@ -1,0 +1,20 @@
+#!/bin/sh
+
+. /data/config/kiosk
+
+feh --bg-fill /usr/share/plymouth/themes/spinner/watermark.png
+
+xset s off  > /dev/null 2>&1      # don't activate screensaver
+xset -dpms   > /dev/null 2>&1     # disable DPMS (Energy Star) features.
+xset s noblank   > /dev/null 2>&1 # don't blank the video device
+
+su -l -c "unclutter -idle 0 -root" kiosk &
+su -l -c "onboard" kiosk &
+
+su -l -c "chromium --kiosk --noerrdialogs --hide-crash-restore-bubble \
+              --no-first-run --hide-scrollbars --pull-to-refresh=1 \
+              --force-device-scale-factor=0.9 --force-dark-mode \
+              ${URL:=https://news.ycombinator.com/}" kiosk &
+
+exec dbus-run-session matchbox-window-manager -use_titlebar no -use_cursor no
+

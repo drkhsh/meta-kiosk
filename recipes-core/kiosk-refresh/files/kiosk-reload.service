@@ -1,0 +1,7 @@
+[Unit]
+Description=Run reload in chromium browser
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/refresh-chromium.sh
+User=kiosk
