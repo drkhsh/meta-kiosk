@@ -7,7 +7,7 @@ RPROVIDES:${PN} = "user-kiosk"
 
 inherit useradd
 USERADD_PARAM:${PN} = " \
-    --user-group --create-home \
+    -u 1002 --user-group --create-home \
     --groups audio,video,shutdown,users \
     kiosk"
 USERADD_PACKAGES = "${PN}"
