@@ -4,6 +4,8 @@ LICENSE = "GPL-3.0-or-later"
 inherit packagegroup
 
 RDEPENDS:${PN} += " \
+    packagegroup-core-x11-xserver \
+    packagegroup-core-x11-utils \
     kiosk-autostart \
     kiosk-refresh \
     chromium-x11 \
@@ -11,9 +13,12 @@ RDEPENDS:${PN} += " \
     at-spi2-core \
     ibus \
     matchbox-wm \
+    matchbox-terminal \
     unclutter-xfixes \
     xdotool \
     feh \
     user-kiosk \
+    mini-x-session \
+    liberation-fonts \
     "
 
