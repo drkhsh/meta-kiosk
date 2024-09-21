@@ -1,6 +1,7 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 SRC_URI += " \
+    file://0001-ply-device-manager-add-missing-function-declaration.patch \
     file://skynet.png \
     file://spinner.plymouth \
 "
