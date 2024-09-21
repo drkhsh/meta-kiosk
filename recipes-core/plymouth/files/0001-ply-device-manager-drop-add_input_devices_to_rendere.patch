@@ -1,0 +1,25 @@
+From 453778fedf79b91896ae056a7c59f23c38604c48 Mon Sep 17 00:00:00 2001
+From: drkhsh <me@drkhsh.at>
+Date: Sat, 21 Sep 2024 14:52:23 +0000
+Subject: [PATCH] ply-device-manager: drop add_input_devices_to_renderer
+
+---
+ src/libply-splash-core/ply-device-manager.c | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/src/libply-splash-core/ply-device-manager.c b/src/libply-splash-core/ply-device-manager.c
+index 59e579dd..7299303a 100644
+--- a/src/libply-splash-core/ply-device-manager.c
++++ b/src/libply-splash-core/ply-device-manager.c
+@@ -1129,8 +1129,6 @@ create_devices_for_terminal_and_renderer_type (ply_device_manager_t *manager,
+                                 renderer = NULL;
+                                 return true;
+                         }
+-
+-                        add_input_devices_to_renderer (manager, renderer);
+                 }
+         }
+ 
+-- 
+2.46.1
+
