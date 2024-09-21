@@ -9,6 +9,7 @@ RDEPENDS:${PN} += " \
     kiosk-autostart \
     kiosk-refresh \
     chromium-x11 \
+    libgles2 libgles2-mesa \
     onboard \
     at-spi2-core \
     ibus \
