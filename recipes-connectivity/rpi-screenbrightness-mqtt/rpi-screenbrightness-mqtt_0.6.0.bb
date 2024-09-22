@@ -28,6 +28,7 @@ do_install:append () {
 	install -d -m 755 ${D}${sysconfdir}/systemd/system
 	install -m 0644 ${WORKDIR}/rpi_screenbrightness_mqtt.service ${D}${sysconfdir}/systemd/system/rpi_screenbrightness_mqtt.service
 
+	install -d -m 755 ${D}/data/config
     install -m 0644 ${WORKDIR}/rpi_screenbrightness_mqtt.conf ${D}/data/config/rpi_screenbrightness_mqtt
     ln -sf /data/config/rpi_screenbrightness_mqtt ${D}${sysconfdir}/rpi_screenbrightness_mqtt.conf
 }
