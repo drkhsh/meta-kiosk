@@ -9,7 +9,3 @@ SRC_URI[sha256sum] = "0c64a8aa401574c75942045b9af70d1656e14c5366151c0cbb400cbeed
 PYPI_PACKAGE = "rpi-backlight"
 
 inherit pypi setuptools3
-
-RDEPENDS:${PN} += "\
-    python3-core \
-    "
