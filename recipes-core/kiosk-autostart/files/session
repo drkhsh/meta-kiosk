@@ -13,6 +13,7 @@ su -l -c "onboard" kiosk &
 
 su -l -c "chromium --kiosk --use-gl=angle --ignore-gpu-blocklist \
               --enable-zero-copy --enable-gpu-rasterization \
+              --force-renderer-accessibility --enable-remote-extensions \
               --noerrdialogs --hide-crash-restore-bubble \
               --no-first-run --hide-scrollbars --pull-to-refresh=1 \
               --force-device-scale-factor=0.9 --force-dark-mode \
