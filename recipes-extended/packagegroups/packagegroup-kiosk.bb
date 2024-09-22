@@ -22,5 +22,6 @@ RDEPENDS:${PN} += " \
     mini-x-session \
     liberation-fonts \
     plymouth \
+    rpi-screenbrightness-mqtt \
     "
 
