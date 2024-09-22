@@ -32,3 +32,5 @@ do_install:append () {
     install -m 0644 ${WORKDIR}/rpi_screenbrightness_mqtt.conf ${D}/data/config/rpi_screenbrightness_mqtt
     ln -sf /data/config/rpi_screenbrightness_mqtt ${D}${sysconfdir}/rpi_screenbrightness_mqtt.conf
 }
+
+FILES:${PN} += "/data/config/rpi_screenbrightness_mqtt"
