@@ -12,7 +12,7 @@ RDEPENDS:${PN} += " \
 "
 
 SRC_URI = "git://github.com/tofuSCHNITZEL/rpi-screenbrightness-mqtt.git;branch=master;protocol=https"
-SRCREV= "88cf6d9b9b685ffa1720644bd53c742afb10a414"
+SRCREV= "dc17bee9f0b8c43483648f9504ddf94c1416302b"
 
 S = "${WORKDIR}/git"
 
