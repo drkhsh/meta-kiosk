@@ -11,9 +11,23 @@ RDEPENDS:${PN} += " \
     python3-rpi-backlight \
 "
 
-SRC_URI = "git://github.com/tofuSCHNITZEL/rpi-screenbrightness-mqtt.git;branch=master;protocol=https"
+SRC_URI = "git://github.com/tofuSCHNITZEL/rpi-screenbrightness-mqtt.git;branch=master;protocol=https \
+           file://rpi_screenbrightness_mqtt.service \
+           file://rpi_screenbrightness_mqtt.conf \
+"
 SRCREV= "dc17bee9f0b8c43483648f9504ddf94c1416302b"
+
+SYSTEMD_SERVICE:${PN} = "rpi_screenbrightness_mqtt.service"
+SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 
 S = "${WORKDIR}/git"
 
 inherit setuptools3
+
+do_install:append () {
+	install -d -m 755 ${D}${sysconfdir}/systemd/system
+	install -m 0644 ${WORKDIR}/rpi_screenbrightness_mqtt.service ${D}${sysconfdir}/systemd/system/rpi_screenbrightness_mqtt.service
+
+    install -m 0644 ${WORKDIR}/rpi_screenbrightness_mqtt.conf ${D}/data/config/rpi_screenbrightness_mqtt
+    ln -sf /data/config/rpi_screenbrightness_mqtt ${D}${sysconfdir}/rpi_screenbrightness_mqtt.conf
+}
