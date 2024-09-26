@@ -2,7 +2,7 @@
 
 . /data/config/kiosk
 
-feh --bg-fill /usr/share/plymouth/themes/spinner/watermark.png
+feh --bg-fill /usr/share/wallpapers/skynet.png
 
 xset s off  > /dev/null 2>&1      # don't activate screensaver
 xset -dpms   > /dev/null 2>&1     # disable DPMS (Energy Star) features.
