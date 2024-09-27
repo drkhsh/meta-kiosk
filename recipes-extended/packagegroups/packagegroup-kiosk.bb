@@ -8,6 +8,7 @@ RDEPENDS:${PN} += " \
     packagegroup-core-x11-utils \
     kiosk-autostart \
     kiosk-refresh \
+    kiosk-wallpaper \
     chromium-x11 \
     libgles2 libgles2-mesa \
     onboard \
