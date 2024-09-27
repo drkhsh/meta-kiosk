@@ -17,7 +17,7 @@ USERADD_PARAM:${PN} = " \
 USERADD_PACKAGES = "${PN}"
 
 do_install:append () {
-    install -m 0755 ${D}/usr/share/wallpapers
+    install -d -m 0755 ${D}/usr/share/wallpapers
     install -m 0644 ${WORKDIR}/skynet-wallpaper.png ${D}/usr/share/wallpapers/skynet.png
 }
 
