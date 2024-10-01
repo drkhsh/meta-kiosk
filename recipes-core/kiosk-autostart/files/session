@@ -17,7 +17,7 @@ su -l -c "chromium --kiosk --use-gl=angle --ignore-gpu-blocklist \
               --noerrdialogs --hide-crash-restore-bubble \
               --no-first-run --hide-scrollbars --pull-to-refresh=1 \
               --force-device-scale-factor=0.9 --force-dark-mode \
-              ${URL:=https://news.ycombinator.com/}" kiosk &
+              \"${URL:=https://news.ycombinator.com/}\"" kiosk &
 
 exec dbus-run-session matchbox-window-manager -use_titlebar no -use_cursor no
 
