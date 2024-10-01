@@ -23,5 +23,7 @@ RDEPENDS:${PN} += " \
     mini-x-session \
     liberation-fonts \
     rpi-screenbrightness-mqtt \
+    noto-color-emoji-unhinted \
+    psplash \
     "
 
