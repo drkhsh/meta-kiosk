@@ -14,5 +14,6 @@ RDEPENDS:${PN} += " \
     psplash \
     wayland \
     weston \
+    weston-init \
     "
 
