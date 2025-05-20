@@ -5,12 +5,11 @@ inherit packagegroup
 
 RDEPENDS:${PN} += " \
     kiosk-autostart-wayland \
-    kiosk-wallpaper-wayland \
-    chromium-x11 \
+    kiosk-wallpaper \
+    chromium-ozone-wayland \
     libgles2 libgles2-mesa \
     user-kiosk \
     liberation-fonts \
-    rpi-screenbrightness-mqtt \
     noto-color-emoji-unhinted \
     psplash \
     wayland \
