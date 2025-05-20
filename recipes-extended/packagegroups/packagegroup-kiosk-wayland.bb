@@ -3,6 +3,8 @@ LICENSE = "GPL-3.0-or-later"
 
 inherit packagegroup
 
+REQUIRED_DISTRO_FEATURES = "wayland"
+
 RDEPENDS:${PN} += " \
     kiosk-autostart-wayland \
     kiosk-wallpaper \

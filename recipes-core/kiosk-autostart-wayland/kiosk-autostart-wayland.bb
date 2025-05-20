@@ -25,5 +25,5 @@ do_install () {
 SYSTEMD_PACKAGES = "${PN}"
 SYSTEMD_SERVICE_${PN} = "wayland-launch-kiosk.service"
 
-FILES:${PN} += " /data/config/kiosk"
+FILES:${PN} += " /data/config/kiosk /usr/lib/systemd/system/wayland-launch-kiosk.service"
 
