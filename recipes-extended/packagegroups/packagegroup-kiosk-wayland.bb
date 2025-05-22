@@ -1,7 +1,7 @@
 DESCRIPTION = "Common package group list for kiosk image (wayland)"
 LICENSE = "GPL-3.0-or-later"
 
-inherit packagegroup
+inherit packagegroup features_check
 
 REQUIRED_DISTRO_FEATURES = "wayland"
 

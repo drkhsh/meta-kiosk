@@ -1,7 +1,9 @@
 DESCRIPTION = "Common package group list for kiosk image"
 LICENSE = "GPL-3.0-or-later"
 
-inherit packagegroup
+inherit packagegroup features_check
+
+REQUIRED_DISTRO_FEATURES = "x11"
 
 RDEPENDS:${PN} += " \
     packagegroup-core-x11-xserver \
