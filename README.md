@@ -60,4 +60,7 @@ Run 'bitbake-layers add-layer meta-kiosk'
 
 ### II. Misc
 
---- replace with specific information about the meta-kiosk layer ---
+There are two packagegroups - include one of them in your image:
+
+- packagegroup-kiosk
+- packagegroup-kiosk-wayland
