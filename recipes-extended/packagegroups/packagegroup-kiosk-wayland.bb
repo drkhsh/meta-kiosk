@@ -17,5 +17,6 @@ RDEPENDS:${PN} += " \
     wayland \
     weston \
     weston-init \
+    seatd \
     "
 
