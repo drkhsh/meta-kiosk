@@ -22,5 +22,5 @@ export WAYLAND_DISPLAY=wayland-1
 	--enable-gpu-rasterization --force-renderer-accessibility --enable-remote-extensions \
 	--noerrdialogs --hide-crash-restore-bubble --no-first-run --hide-scrollbars \
 	--pull-to-refresh=1 --force-device-scale-factor=0.9 --force-dark-mode \
-	\"${URL:=https://news.ycombinator.com/}\" &
+	"${URL:=https://news.ycombinator.com/}" &
 
