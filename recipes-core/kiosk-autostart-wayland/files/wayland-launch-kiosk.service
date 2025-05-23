@@ -4,6 +4,7 @@ After=weston.service
 Requires=weston.service
 
 [Service]
+User=weston
 Restart=on-failure
 Type=forking
 ExecStart=/usr/bin/wayland-launch-kiosk.sh
