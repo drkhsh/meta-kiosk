@@ -21,6 +21,6 @@ export WAYLAND_DISPLAY=wayland-1
 /usr/bin/chromium --kiosk --use-gl=angle --ignore-gpu-blocklist --enable-zero-copy \
 	--enable-gpu-rasterization --force-renderer-accessibility --enable-remote-extensions \
 	--noerrdialogs --hide-crash-restore-bubble --no-first-run --hide-scrollbars \
-	--pull-to-refresh=1 --force-device-scale-factor=0.9 --force-dark-mode \
+	--pull-to-refresh=1 --force-dark-mode --start-fullscreen --start-maximized \
 	"${URL:=https://news.ycombinator.com/}" &
 
