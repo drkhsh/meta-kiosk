@@ -4,6 +4,6 @@ FILESEXTRAPATHS:prepend = "${THISDIR}/${PN}:"
 USERADD_PARAM:${PN} = "--home /home/weston --shell /bin/sh --user-group -G video,input,render,seat,wayland weston"
 GROUPADD_PARAM:${PN} = "-r wayland; -r render; -r seat"
 
-do_install() {
+do_install:append() {
         install -D -p -m0644 ${WORKDIR}/weston.ini ${D}${sysconfdir}/xdg/weston/weston.ini
 }
