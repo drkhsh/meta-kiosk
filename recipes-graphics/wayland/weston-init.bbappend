@@ -14,6 +14,6 @@ do_install:append() {
                         ${D}${systemd_system_unitdir}/weston.service
         fi
 
-        rm ${D}${sysconfdir}/xdg/weston/weston.ini
-        install -D -p -m0644 ${WORKDIR}/weston.ini ${D}${sysconfdir}/xdg/weston/weston.ini
+        sed -i -e "/^\[core\]/a shell=kiosk-shell.so" ${D}${sysconfdir}/xdg/weston/weston.ini
+        sed -i -e "/^\[shell\]/a background-image=/usr/share/wallpapers/wallpaper.png" ${D}${sysconfdir}/xdg/weston/weston.ini
 }
