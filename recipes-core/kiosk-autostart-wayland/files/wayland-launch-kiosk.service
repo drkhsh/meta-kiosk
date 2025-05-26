@@ -2,13 +2,16 @@
 Description=Start kiosk on wayland
 After=weston.service
 Requires=weston.service
+Wants=graphical.target
+After=graphical.target
 
 [Service]
 User=weston
+Group=weston
 Restart=on-failure
 Type=forking
 ExecStart=/usr/bin/wayland-launch-kiosk.sh
-RestartSec=1
+RestartSec=10
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=graphical.target
