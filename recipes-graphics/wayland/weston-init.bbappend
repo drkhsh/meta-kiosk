@@ -3,7 +3,7 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 SRC_URI:append = " file://override.conf"
 
 # https://patchwork.yoctoproject.org/project/oe-core/patch/20241127195904.91647-2-raj.khem@gmail.com/
-USERADD_PARAM:${PN} = "--home /home/weston --shell /bin/sh --user-group -G video,input,render,seat,wayland weston"
+USERADD_PARAM:${PN} = "--home /home/weston --shell /bin/sh --user-group -G audio,video,input,render,seat,wayland weston"
 GROUPADD_PARAM:${PN} = "-r wayland; -r render; -r seat"
 
 do_install:append() {
