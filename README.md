@@ -62,5 +62,5 @@ Run 'bitbake-layers add-layer meta-kiosk'
 
 There are two packagegroups - include one of them in your image:
 
-- packagegroup-kiosk
-- packagegroup-kiosk-wayland
+- packagegroup-kiosk (based on X11)
+- packagegroup-kiosk-wayland (based on Wayland/Weston)
