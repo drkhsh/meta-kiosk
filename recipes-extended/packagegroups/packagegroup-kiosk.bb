@@ -29,3 +29,4 @@ RDEPENDS:${PN} += " \
     psplash \
     "
 
+PACKAGE_ARCH = "${TUNE_PKGARCH}"

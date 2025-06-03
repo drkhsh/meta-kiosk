@@ -20,3 +20,4 @@ RDEPENDS:${PN} += " \
     seatd \
     "
 
+PACKAGE_ARCH = "${TUNE_PKGARCH}"
